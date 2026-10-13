@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body { @apply bg-charcoal-900 text-steel-200 font-sans antialiased; }
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-7xl px-5 sm:px-8; }
+  .section { @apply py-20 sm:py-28; }
+  .eyebrow { @apply font-display text-sm font-semibold uppercase tracking-[0.3em] text-duron-400; }
+  .h-section { @apply mt-3 font-display text-4xl font-bold uppercase leading-[1.05] text-white sm:text-5xl lg:text-6xl; }
+  .btn { @apply relative inline-flex items-center justify-center gap-2 overflow-hidden px-7 py-3.5 font-display text-base font-semibold uppercase tracking-widest transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white; }
+  .btn-primary { @apply bg-duron-500 text-white hover:bg-duron-400 hover:shadow-[0_0_30px_-4px_rgba(200,16,46,0.7)]; }
+  .btn-ghost { @apply border border-steel-400/50 text-white hover:border-white hover:bg-white/10; }
+  .metal-text { background: linear-gradient(180deg,#fff 0%,#b9bfc7 55%,#7b838e 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .brushed { background-image: repeating-linear-gradient(90deg, rgba(255,255,255,.035) 0 1px, transparent 1px 3px), linear-gradient(135deg,#2d3238 0%,#181b1f 50%,#2d3238 100%); }
+  .glass { @apply border border-white/10 bg-white/5 backdrop-blur-md; }
+  .grid-lines { background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px); background-size: 56px 56px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
